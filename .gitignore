@@ -1,0 +1,11 @@
+.idea
+dist
+.DS_Store
+node_modules
+.idea
+*.iml
+coverage
+*.log
+.work/
+*~
+results/

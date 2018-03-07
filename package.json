@@ -1,0 +1,24 @@
+{
+  "name": "pelam-swift-dep-checker",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "ci:test": ""
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bin": {
+    "deps-graphviz": "./bin/index.js"
+  },
+  "dependencies": {
+    "bacon-node-line-stream": "^1.0.0",
+    "baconjs": "^0.7.95",
+    "bluebird": "^3.4.5",
+    "fast-plist": "^0.1.2",
+    "partial.lenses": "^13.0.0",
+    "ramda": "^0.25.0",
+    "walk": "^2.3.9"
+  }
+}
