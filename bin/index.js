@@ -242,5 +242,6 @@ function readDerivedDataPlist(data) {
 }
 
 function isValidDerivedDataDir(data) {
-  return (data.derivedDataInfoPlist.WorkspacePath || "").startsWith(cwd) && data.derivedDataInfoPlist.LastAccessedDate
+  const workspacePath = data.derivedDataInfoPlist.WorkspacePath
+  return workspacePath && workspacePath.startsWith(cwd) && data.derivedDataInfoPlist.LastAccessedDate
 }
