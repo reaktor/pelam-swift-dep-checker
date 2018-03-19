@@ -195,8 +195,9 @@ fileNameStream
 
     function depthFirstSearch(dependant) {
       if (temporarilyMarkedStack.includes(dependant)) {
-        // loop detected
-        temporarilyMarkedStack.forEach(x => loopParticipants[x] = true)
+        // loop detected, mark involved nodes as loop participants
+        const loop = temporarilyMarkedStack.slice(temporarilyMarkedStack.indexOf(dependant))
+        loop.forEach(x => loopParticipants[x] = true)
       } else if (!permanentlyMarked.hasOwnProperty(dependant)) {
         temporarilyMarkedStack.push(dependant)
         dependantsToDeps[dependant].forEach(depthFirstSearch)
