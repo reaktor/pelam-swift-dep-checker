@@ -99,7 +99,7 @@ const fileNameStream =
         }
       } else {
         const chosen = accepted[0]
-        console.log("Analyzing dependencies based on .swiftdeps files in\n", chosen.swiftDepsDir)
+        console.log("Analyzing dependencies based on .swiftdeps files in:\n  ", chosen.swiftDepsDir, "\n  last modified date:", chosen.derivedDataInfoPlist.LastAccessedDate)
         return Bacon.once(chosen) // take the most recently accessed derived data dir
       }
     })
