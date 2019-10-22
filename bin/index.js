@@ -229,7 +229,7 @@ fileNameStream
   .map(dagRows => dagRows.reduce((acc, row) => acc + "  " + row + ";\n", ""))
   .map(dag => `digraph {\n  rankdir=LR;\n${dag}}`)
   .map(dotFileContent => {
-    fs.writeFile("output.dot", dotFileContent)
+    fs.writeFileSync("output.dot", dotFileContent)
     return "Wrote output.dot"
   })
   .log()
